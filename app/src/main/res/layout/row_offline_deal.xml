@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_offline_deal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:descendantFocusability="blocksDescendants"
+   >
+
+    <ImageView
+        android:id="@+id/iv_product_pic"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:background="@color/grayBg"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:transitionName="simple_activity_transition"
+        android:src="@drawable/ic_placeholder"
+        tools:ignore="ContentDescription"/>
+
+    <com.shopoholicbuddy.customviews.CustomTextView
+        android:id="@+id/tv_number_of_images"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_product_pic"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_alignStart="@+id/iv_product_pic"
+        android:layout_alignEnd="@+id/iv_product_pic"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="@string/images"
+        android:gravity="center"
+        android:textColor="@color/colorHintText"
+        android:textSize="@dimen/_11ssp"
+        app:fontName="@string/orkney_regular"/>
+
+    <com.shopoholicbuddy.customviews.CustomTextView
+        android:id="@+id/tv_deal_offers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_toEndOf="@+id/iv_product_pic"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_toStartOf="@+id/iv_delete"
+        android:textColor="@color/colorLightWhite"
+        android:textSize="@dimen/_14ssp"
+        app:fontName="@string/orkney_bold"
+        tools:text="@string/dummy_text"/>
+
+    <com.shopoholicbuddy.customviews.CustomTextView
+        android:id="@+id/tv_deal_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_deal_offers"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_toEndOf="@+id/iv_product_pic"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textColor="@color/colorHintText"
+        android:textSize="@dimen/_10ssp"
+        app:fontName="@string/orkney_regular"
+        tools:text="@string/dummy_text_long"/>
+
+    <com.shopoholicbuddy.customviews.CustomTextView
+        android:id="@+id/tv_deal_posted_on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_deal_description"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_toEndOf="@+id/iv_product_pic"
+        android:text="@string/posted_on"
+        android:textColor="@color/colorLightWhite"
+        android:textSize="@dimen/_10ssp"
+        app:fontName="@string/orkney_regular"
+        />
+
+    <com.shopoholicbuddy.customviews.CustomTextView
+        android:id="@+id/tv_posted_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_deal_description"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_toEndOf="@+id/tv_deal_posted_on"
+        android:ellipsize="end"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:maxLines="1"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/_9ssp"
+        app:fontName="@string/orkney_regular"
+        tools:text="21/21/2018"/>
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_rubbish_bin"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:padding="@dimen/_5sdp"
+        android:visibility="gone"
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_3sdp"
+        android:background="@drawable/black_overlay"
+        android:layout_below="@+id/tv_number_of_images"
+        android:layout_marginTop="@dimen/_5sdp"/>
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/rl_buddy_assigned"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_buddy_image"
+        android:layout_width="@dimen/_49sdp"
+        android:layout_height="@dimen/_49sdp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_9sdp"
+        android:src="@drawable/ic_side_menu_user_placeholder"/>
+
+    <com.shopoholicbuddy.customviews.CustomTextView
+        android:id="@+id/tv_buddy_request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/round_corner_accept_request"
+        android:paddingBottom="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:text="@string/request"
+        android:textAllCaps="true"
+        android:textColor="@color/colorLightWhite"
+        android:textSize="@dimen/_10ssp"
+        app:fontName="@string/orkney_medium"
+        />
+
+    <com.shopoholicbuddy.customviews.CustomTextView
+        android:id="@+id/tv_buddy_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:layout_toEndOf="@+id/iv_buddy_image"
+        android:layout_toStartOf="@+id/tv_buddy_request"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/colorLightWhite"
+        android:textSize="@dimen/_15ssp"
+        app:fontName="@string/orkney_medium"/>
+
+    <RatingBar
+        android:id="@+id/rb_buddy_rating"
+        style="@style/buddyRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_buddy_name"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_toEndOf="@+id/iv_buddy_image"
+        />
+
+
+    <com.shopoholicbuddy.customviews.CustomTextView
+        android:id="@+id/tv_buddy_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rb_buddy_rating"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_toEndOf="@+id/iv_buddy_image"
+        android:layout_toStartOf="@+id/tv_buddy_request"
+        android:drawablePadding="@dimen/_5sdp"
+        android:drawableStart="@drawable/ic_shoppers_buddy_list_llocation"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/colorHintText"
+        android:textSize="@dimen/_11ssp"
+        />
+
+</RelativeLayout>

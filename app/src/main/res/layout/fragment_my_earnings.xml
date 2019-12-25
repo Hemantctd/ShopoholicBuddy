@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toolbar_gradient"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/_5sdp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.shopoholicbuddy.customviews.CustomTextView
+                android:id="@+id/tv_total_earning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_20ssp"
+                app:fontName="@string/orkney_bold"
+                tools:text="$14350" />
+
+        </FrameLayout>
+
+        <com.shopoholicbuddy.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/total_earnings_till_now"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_13ssp"
+            app:fontName="@string/orkney_regular" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@android:color/white" />
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_payment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <com.shopoholicbuddy.customviews.CustomTextView
+                    android:id="@+id/tv_payment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_13ssp"
+                    app:fontName="@string/orkney_medium"
+                    tools:text="Pending amount : ₹1000" />
+
+                <ProgressBar
+                    android:id="@+id/paymentProgressBar"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:visibility="invisible" />
+
+
+                <com.shopoholicbuddy.customviews.CustomTextView
+                    android:id="@+id/tv_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/round_corner_blue_gradient_button_bg"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_15sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:text="@string/pay"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:visibility="visible"
+                    app:fontName="@string/orkney_medium"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorLighterGrey"
+                android:layout_marginBottom="@dimen/_5sdp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.shopoholicbuddy.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:paddingEnd="@dimen/_15sdp"
+                    android:text="@string/earning_statistics"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_13ssp"
+                    app:fontName="@string/orkney_medium" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:visibility="invisible" />
+            </FrameLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="true"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                tools:targetApi="lollipop">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_last_week"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:background="@drawable/round_corner_weak_gradient_bg"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <com.shopoholicbuddy.customviews.CustomTextView
+                            android:id="@+id/tv_week_earning"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_18ssp"
+                            app:fontName="@string/orkney_bold"
+                            tools:text="$150" />
+
+                        <com.shopoholicbuddy.customviews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/last_week"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_13ssp"
+                            app:fontName="@string/orkney_regular" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_last_month"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/round_corner_month_gradient_bg"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <com.shopoholicbuddy.customviews.CustomTextView
+                            android:id="@+id/tv_month_earning"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_18ssp"
+                            app:fontName="@string/orkney_bold"
+                            tools:text="$650" />
+
+                        <com.shopoholicbuddy.customviews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/last_month"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_13ssp"
+                            app:fontName="@string/orkney_regular" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_last_year"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:background="@drawable/round_corner_year_gradient_bg"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <com.shopoholicbuddy.customviews.CustomTextView
+                            android:id="@+id/tv_year_earning"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_18ssp"
+                            app:fontName="@string/orkney_bold"
+                            tools:text="$1250" />
+
+                        <com.shopoholicbuddy.customviews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/last_year"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_13ssp"
+                            app:fontName="@string/orkney_regular" />
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@drawable/black_overlay" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <com.shopoholicbuddy.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="-10dp"
+                    android:rotation="-90"
+                    android:text="@string/currency_dollar"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_10ssp"
+                    app:fontName="@string/orkney_medium" />
+
+                <com.charting.charts.LineChart
+                    android:id="@+id/chart_earning"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_250sdp"
+                    android:layout_marginStart="-20dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent" />
+
+                <ImageView
+                    android:id="@+id/iv_earning_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="0dp"
+                    android:src="@drawable/ic_setting_arrow"
+                    android:visibility="visible"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@drawable/black_overlay" />
+
+            <com.shopoholicbuddy.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:text="@string/category_statistics"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_13ssp"
+                app:fontName="@string/orkney_medium" />
+
+            <com.charting.charts.BarChart
+                android:id="@+id/chart_categories"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_250sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@android:color/transparent" />
+
+            <com.shopoholicbuddy.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:text="@string/category"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_10ssp"
+                app:fontName="@string/orkney_medium" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

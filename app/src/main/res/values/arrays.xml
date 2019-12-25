@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer-array name="menu_items_image">
+        <item>@drawable/ic_buddy_side_menu_home_selected</item>
+        <item>@drawable/ic_buddy_side_menu_order_selected</item>
+        <item>@drawable/ic_buddy_side_menu_mydeals_selected</item>
+        <item>@drawable/ic_buddy_side_menu_offline_deals_selected</item>
+        <item>@drawable/ic_buddy_side_menu_fans_selected</item>
+        <item>@drawable/ic_buddy_side_menu_earning_selected</item>
+        <item>@drawable/ic_buddy_side_menu_chat_selected</item>
+        <item>@drawable/ic_buddy_side_menu_request_deselected</item>
+        <item>@drawable/ic_buddy_side_menu_request_deselected</item>
+        <item>@drawable/ic_buddy_side_menu_notification_selected</item>
+    </integer-array>
+
+    <integer-array name="menu_items_image_deselected">
+        <item>@drawable/ic_buddy_side_menu_home_deselected</item>
+        <item>@drawable/ic_buddy_side_menu_order_deselected</item>
+        <item>@drawable/ic_buddy_side_menu_mydeals_deselected</item>
+        <item>@drawable/ic_buddy_side_menu_offline_deals_deselected</item>
+        <item>@drawable/ic_buddy_side_menu_fans_deselected</item>
+        <item>@drawable/ic_buddy_side_menu_earning_deselected</item>
+        <item>@drawable/ic_buddy_side_menu_chat_deselected</item>
+        <item>@drawable/ic_buddy_side_menu_request_deselected_2</item>
+        <item>@drawable/ic_buddy_side_menu_request_deselected_2</item>
+        <item>@drawable/ic_buddy_side_menu_notification_deselected</item>
+    </integer-array>
+
+    <string-array name="merchant_type">
+        <item>Merchant Type</item>
+        <item>Product Seller</item>
+        <item>Service Provider</item>
+        <item>Both</item>
+
+    </string-array>
+</resources>

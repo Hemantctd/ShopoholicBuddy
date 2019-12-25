@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include
+        android:id="@+id/layout_toolbar"
+        layout="@layout/layout_login_toolbar"/>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/bg_login">
+
+        <com.shopoholicbuddy.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/time_period"
+            android:layout_marginStart="@dimen/_10ssp"
+            android:textColor="@color/colorLightWhite"
+            android:textSize="@dimen/_15ssp"
+            app:fontName="@string/orkney_bold"
+
+            />
+
+
+            <com.shopoholicbuddy.customviews.CustomTextView
+                android:id="@+id/tv_select_time_period"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:background="@android:color/transparent"
+                android:drawableEnd="@drawable/ic_signup_dropdown"
+                android:gravity="center"
+                android:hint="@string/select_time_period"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:longClickable="false"
+                android:lines="1"
+                android:maxLength="45"
+                android:maxLines="1"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/colorHintText"
+                android:textSize="@dimen/_12ssp"
+                app:fontName="@string/orkney_regular" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:background="@color/colorSeparator" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_3sdp"
+                android:background="@drawable/black_overlay"
+                android:layout_marginTop="@dimen/_15ssp"/>
+
+            <com.shopoholicbuddy.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="@string/select_duration_manually"
+                android:layout_marginStart="@dimen/_10ssp"
+                android:textColor="@color/colorLightWhite"
+                android:textSize="@dimen/_15ssp"
+                app:fontName="@string/orkney_bold"
+
+                />
+
+            <LinearLayout
+                android:visibility="visible"
+                android:id="@+id/ll_timings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.shopoholicbuddy.customviews.CustomTextView
+                        android:id="@+id/tv_start_timing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:drawableEnd="@drawable/ic_shoppers_other_info_calender"
+                        android:hint="@string/start_date"
+                        android:imeOptions="actionNext"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:longClickable="false"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@color/colorHintText"
+                        android:textSize="@dimen/_11ssp"
+                        app:fontName="@string/orkney_regular" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorSeparator" />
+
+                </LinearLayout>
+
+
+                <com.shopoholicbuddy.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:paddingEnd="@dimen/_12sdp"
+                    android:paddingStart="@dimen/_12sdp"
+                    android:text="@string/to"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:textColor="@color/colorHintText"
+                    android:textSize="@dimen/_11ssp"
+                    app:fontName="@string/orkney_regular" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.shopoholicbuddy.customviews.CustomTextView
+                        android:id="@+id/tv_end_timing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:drawableEnd="@drawable/ic_shoppers_other_info_calender"
+                        android:hint="@string/end_date"
+                        android:imeOptions="actionNext"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:textColor="@android:color/white"
+                        android:longClickable="false"
+                        android:textColorHint="@color/colorHintText"
+                        android:textSize="@dimen/_11ssp"
+                        app:fontName="@string/orkney_regular" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorSeparator" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_3sdp"
+                android:background="@drawable/black_overlay"
+                android:layout_marginTop="@dimen/_15ssp"/>
+
+            <com.shopoholicbuddy.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/category"
+                android:layout_marginStart="@dimen/_10ssp"
+                android:textColor="@color/colorLightWhite"
+                android:textSize="@dimen/_15ssp"
+                app:fontName="@string/orkney_bold"
+
+                />
+
+
+            <com.shopoholicbuddy.customviews.CustomTextView
+                android:id="@+id/tv_select_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:background="@android:color/transparent"
+                android:drawableEnd="@drawable/ic_signup_dropdown"
+                android:gravity="center"
+                android:hint="@string/txt_select_category"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:lines="1"
+                android:maxLength="45"
+                android:longClickable="false"
+                android:maxLines="1"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/colorHintText"
+                android:textSize="@dimen/_12ssp"
+                app:fontName="@string/orkney_regular" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@color/colorSeparator" />
+
+            <include
+                android:id="@+id/progress_loader"
+                layout="@layout/layout_button_loader" />
+
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/bottom_sheet"
+            layout="@layout/layout_bottom_sheet" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</LinearLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/_8sdp"
+    android:layout_marginStart="@dimen/_8sdp"
+    android:layout_marginTop="@dimen/_8sdp"
+    app:cardCornerRadius="@dimen/_5sdp">
+
+    <RelativeLayout
+        android:id="@+id/rl_post_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorMessageTitle"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_3sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingTop="@dimen/_5sdp">
+
+        <ImageView
+            android:id="@+id/iv_menu"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:src="@drawable/ic_chat_dots"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:id="@+id/ll_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/iv_product_pic"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:background="@color/grayBg"
+                android:src="@drawable/ic_placeholder"
+                android:transitionName="simple_activity_transition"
+                tools:ignore="ContentDescription"
+                tools:targetApi="lollipop" />
+
+            <com.shopoholicbuddy.customviews.CustomTextView
+                android:id="@+id/tv_no_of_items"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@android:color/white"
+                app:fontName="@string/orkney_regular"
+                tools:text="5 items" />
+
+            <com.shopoholicbuddy.customviews.CustomTextView
+                android:id="@+id/tv_expire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/expire"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@android:color/white"
+                app:fontName="@string/orkney_regular"
+                />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ll_item"
+            android:layout_toStartOf="@+id/iv_menu"
+            android:includeFontPadding="false"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_13sdp"
+            android:maxLines="2"
+            android:lines="2"
+            android:minLines="1"
+            android:layout_marginTop="@dimen/_5sdp"
+            tools:text="@string/dummy_text"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_instructions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_discount"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toEndOf="@id/ll_item"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_9sdp"
+            tools:text="I have found a hack, without creating custom layout" />
+
+        <TextView
+            android:id="@+id/tv_posted_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_instructions"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toEndOf="@id/ll_item"
+            android:text="@string/posted_on"
+            android:textColor="@android:color/white"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_posted_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_instructions"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toEndOf="@id/tv_posted_on"
+            android:textColor="@android:color/white"
+            tools:text="26/11/2017" />
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

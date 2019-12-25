@@ -1,0 +1,209 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.29.0'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public'
+    }
+
+}
+
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "com.shopoholicbuddy"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 3
+        versionName "1.2"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    buildTypes {
+        debug {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+
+        livetest {
+            flavorDimensions "default"
+            buildConfigField("String", "BASE_URL", '"https://testing.shopoholicadmin.com/"')
+            buildConfigField("String", "SOCKET_BASE_URL", '"https://testingsocket.shopoholicadmin.com"')
+            buildConfigField("String", "PORT", '""')
+            buildConfigField("String", "VERSION", '"api/"')
+            buildConfigField("String", "USER_NAME", '"admin"')
+            buildConfigField("String", "PASSWORD", '"12345"')
+            buildConfigField "String", "FIREBASE_PASSWORD", '"Shopoholic12345"'
+            buildConfigField("String", "AMAZON_POOLID", '"eu-west-1:419d9247-27a4-4028-a3fc-daa7beab36b6"')
+            buildConfigField("String", "BUCKET", '"shopoholic-app"')
+            buildConfigField("String", "AMAZON_SERVER_URL", '"https://shopoholic-app.s3.amazonaws.com/"')
+            buildConfigField("String", "END_POINT", '"s3.amazonaws.com"')
+            buildConfigField("String", "REGION", '"2"')
+            buildConfigField("String", "VARIANT", '"livetest"')
+            buildConfigField("String", "FIREBASE_SERVER_KEY", '"AIzaSyBdH9cWDelW_tncOBuPWAOHE0wBX3xVlTU"')
+        }
+        live {
+            flavorDimensions "default"
+            buildConfigField("String", "BASE_URL", '"https://www.shopoholicadmin.com/"')
+            buildConfigField("String", "SOCKET_BASE_URL", '"https://socket.shopoholicadmin.com"')
+            buildConfigField("String", "PORT", '""')
+            buildConfigField("String", "VERSION", '"api/"')
+            buildConfigField("String", "USER_NAME", '"admin"')
+            buildConfigField("String", "PASSWORD", '"12345"')
+            buildConfigField "String", "FIREBASE_PASSWORD", '"Shopoholic12345"'
+            buildConfigField("String", "AMAZON_POOLID", '"eu-west-1:419d9247-27a4-4028-a3fc-daa7beab36b6"')
+            buildConfigField("String", "BUCKET", '"shopoholic-app"')
+            buildConfigField("String", "AMAZON_SERVER_URL", '"https://shopoholic-app.s3.amazonaws.com/"')
+            buildConfigField("String", "END_POINT", '"s3.amazonaws.com"')
+            buildConfigField("String", "REGION", '"2"')
+            buildConfigField("String", "VARIANT", '"live"')
+            buildConfigField("String", "FIREBASE_SERVER_KEY", '"AIzaSyBWK8UgxvTrXJryXP1XrdRm4vporlIo-Pk"')
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.github.lzyzsd:circleprogress:1.2.1'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation "com.android.support:appcompat-v7:${rootProject.ext.appcompat_support}"
+    implementation "com.android.support:support-v4:${rootProject.ext.appcompat_support}"
+    implementation "com.android.support:design:${rootProject.ext.appcompat_support}"
+    implementation "com.android.support:cardview-v7:${rootProject.ext.appcompat_support}"
+
+    //google auth, location, map, places
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+    implementation 'com.google.android.gms:play-services-maps:16.1.0'
+    implementation 'com.google.android.gms:play-services-places:16.0.0'
+    implementation 'com.google.maps.android:android-maps-utils:0.5'
+
+    //view pager page indicator
+    implementation 'me.relex:circleindicator:1.2.2@aar'
+
+    //networking
+    implementation 'com.amitshekhar.android:android-networking:0.3.0'
+
+    //butterknife
+    annotationProcessor "com.jakewharton:butterknife-compiler:${rootProject.ext.butterknife}"
+    implementation "com.jakewharton:butterknife:${rootProject.ext.butterknife}"
+
+    //multidimention
+    implementation "com.intuit.ssp:ssp-android:${rootProject.ext.multidimention}"
+    implementation "com.intuit.sdp:sdp-android:${rootProject.ext.multidimention}"
+
+    //flex box layout
+    implementation "com.google.android:flexbox:${rootProject.ext.flexbox}"
+
+    //lifecycle
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+
+    //retrofit
+    implementation "com.squareup.retrofit2:retrofit:${rootProject.ext.retrofit}"
+    implementation "com.squareup.retrofit2:converter-gson:${rootProject.ext.converter_gson}"
+
+    //multidex
+    implementation "com.android.support:multidex:${rootProject.ext.multidex}"
+
+    //circle image view
+    implementation "de.hdodenhof:circleimageview:${rootProject.ext.circleimageview}"
+
+    //acra
+    implementation "ch.acra:acra:${rootProject.ext.acra}"
+
+    //guava
+    implementation "com.google.guava:guava:${rootProject.ext.guava}"
+
+    //QrCode
+    implementation "com.google.zxing:core:${rootProject.ext.zxing}"
+
+    //glidePlaceAutocomplete
+    implementation "com.github.bumptech.glide:glide:${rootProject.ext.glide}"
+
+    //exoplayer
+    implementation 'com.google.android.exoplayer:exoplayer:2.7.3'
+
+    //appbar spring
+    implementation 'com.github.todou:appbarspring:1.0.7'
+
+    //lib phone no
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.8.2'
+
+    //ShortcutBadger
+    implementation "me.leolin:ShortcutBadger:1.1.22@aar"
+
+    //paytm payment gateway
+    implementation('com.paytm:pgplussdk:1.2.3') {
+        transitive = true
+    }
+
+
+
+    //firebase
+    implementation 'com.google.firebase:firebase-messaging:17.4.0'
+    implementation 'com.google.firebase:firebase-auth:16.1.0'
+    implementation 'com.google.firebase:firebase-database:16.0.6'
+    implementation 'com.stripe:stripe-android:6.1.2'
+    implementation 'com.emredavarci:CircleProgressBar:1.0.8'
+
+    //fabric
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.9@aar') {
+        transitive = true
+    }
+
+    //socket
+    implementation('io.socket:socket.io-client:0.8.3') {
+        // excluding org.json which is provided by Android
+        exclude group: 'org.json', module: 'json'
+    }
+
+    // rcc libraries
+    implementation project(path: ':imagecropper')
+    implementation project(path: ':googlelibrary')
+    implementation project(path: ':fblibrary')
+    implementation project(path: ':locationlibrary')
+    implementation project(path: ':gifprogressbar')
+    implementation project(path: ':amazons3library')
+    implementation project(path: ':multiplemediapicker')
+    implementation project(path: ':imagepreviewlibrary')
+    implementation project(path: ':codescanner')
+    implementation project(path: ':ratingbar')
+    implementation project(path: ':cameraandgallery')
+    implementation project(path: ':mpchartlib')
+    implementation project(path: ':showcaseviewlib')
+
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.9'
+    implementation 'com.android.support:support-annotations:28.0.0'
+}
+
+
+
+apply plugin: 'com.google.gms.google-services'

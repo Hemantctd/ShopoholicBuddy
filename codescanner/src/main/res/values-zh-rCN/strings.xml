@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">codescanner</string>
+    <string name="scan_qr_code">掃瞄 QR 碼</string>
+    <string name="unable_to_scan_code">不能扫瞄编码,请重试</string>
+</resources>

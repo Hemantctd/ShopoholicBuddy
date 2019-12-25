@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_time_slots"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:orientation="vertical">
+
+        <com.shopoholicbuddy.customviews.CustomEditText
+            android:id="@+id/tv_tax_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:hint="@string/hsn_n0"
+            android:imeOptions="actionNext"
+            android:longClickable="false"
+            android:inputType="textCapWords"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:lines="1"
+            android:paddingBottom="@dimen/_5sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/colorHintText"
+            android:textSize="@dimen/_10ssp"
+            app:fontName="@string/orkney_regular" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorSeparator" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_weight="5"
+        android:orientation="vertical">
+
+        <com.shopoholicbuddy.customviews.CustomEditText
+            android:id="@+id/tv_tax_percentage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:hint="@string/tax_value"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+            android:maxLength="5"
+            android:maxLines="1"
+            android:lines="1"
+            android:longClickable="false"
+            android:paddingBottom="@dimen/_5sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/colorHintText"
+            android:textSize="@dimen/_10ssp"
+            app:fontName="@string/orkney_regular" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorSeparator" />
+
+    </LinearLayout>
+
+    <com.shopoholicbuddy.customviews.CustomTextView
+        android:id="@+id/tv_per"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/per"
+        android:textSize="@dimen/_10ssp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:textColor="@android:color/white"
+        app:fontName="@string/orkney_regular"/>
+
+    <ImageView
+        android:id="@+id/iv_remove"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_weight="1.2"
+        android:padding="@dimen/_5sdp"
+        android:visibility="visible"
+        android:src="@drawable/ic_add_deal_price_time_cross"
+        tools:ignore="ContentDescription" />
+
+</LinearLayout>
+
+
+

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_login">
+
+    <include layout="@layout/layout_toolbar"
+        android:id="@+id/layout_toolbar">
+    </include>
+<RelativeLayout
+    android:id="@+id/rl_filter_order_status"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhiteTransparent">
+
+    <com.shopoholicbuddy.customviews.CustomTextView
+        android:id="@+id/tv_filter_order_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:text="@string/order_status"
+        android:textColor="@color/colorLightWhite"
+        android:textSize="@dimen/_13ssp"
+        app:fontName="@string/orkney_medium"
+
+        />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tv_filter_order_status"
+        android:layout_marginStart="@dimen/_54sdp"
+        android:layout_marginTop="@dimen/_3sdp">
+        <RadioButton
+            android:id="@+id/rb_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/all"
+            android:button="@drawable/custom_country_radio_button"
+            android:textSize="@dimen/_13ssp"
+            android:paddingBottom="@dimen/_15sdp"
+            android:paddingTop="@dimen/_13sdp"
+            android:paddingStart="@dimen/_4sdp"
+            android:textColor="@color/colorHintText"
+            tools:ignore="RtlSymmetry"/>
+        <RadioButton
+            android:id="@+id/rb_pending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pending"
+            android:paddingTop="@dimen/_13sdp"
+            android:paddingStart="@dimen/_4sdp"
+            android:button="@drawable/custom_country_radio_button"
+            android:paddingBottom="@dimen/_15sdp"
+            android:textSize="@dimen/_13ssp"
+            android:layout_marginStart="@dimen/_19sdp"
+            android:textColor="@color/colorHintText"
+            tools:ignore="RtlSymmetry"/>
+        <RadioButton
+            android:id="@+id/rb_confirmed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/confirmed"
+            android:paddingTop="@dimen/_13sdp"
+            android:paddingStart="@dimen/_4sdp"
+            android:button="@drawable/custom_country_radio_button"
+            android:paddingBottom="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_19sdp"
+            android:textSize="@dimen/_13ssp"
+            android:textColor="@color/colorHintText"
+            tools:ignore="RtlSymmetry"/>
+    </RadioGroup>
+
+</RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_date_range"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:background="@color/colorWhiteTransparent">
+
+        <com.shopoholicbuddy.customviews.CustomTextView
+            android:id="@+id/tv_date_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:text="@string/date_range"
+            android:textColor="@color/colorLightWhite"
+            android:textSize="@dimen/_13ssp"
+            app:fontName="@string/orkney_medium"
+
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_marginStart="@dimen/_19sdp"
+            android:layout_below="@+id/tv_date_range"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+        <LinearLayout
+            android:id="@+id/ll_date_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+            <com.shopoholicbuddy.customviews.CustomTextView
+                android:id="@+id/tv_choose_date_range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:background="@android:color/transparent"
+                android:text="17/18/2018"
+                android:maxLength="10"
+                android:drawableEnd="@drawable/ic_shoppers_other_info_calender"
+                android:drawablePadding="@dimen/_35sdp"
+                android:textColor="@color/colorLightWhite"
+                android:textSize="@dimen/_13ssp"
+                app:fontName="@string/orkney_regular"
+                tools:ignore="HardcodedText" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:background="@color/colorHintText" />
+
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                 android:layout_marginStart="@dimen/_20sdp"
+                >
+
+                <com.shopoholicbuddy.customviews.CustomTextView
+                    android:id="@+id/tv_choose_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:text="17/18/2018"
+                    android:maxLength="10"
+                    android:drawableEnd="@drawable/ic_shoppers_other_info_calender"
+                    android:drawablePadding="@dimen/_35sdp"
+                    android:textColor="@color/colorLightWhite"
+                    android:textSize="@dimen/_13ssp"
+                    app:fontName="@string/orkney_regular"
+                    tools:ignore="HardcodedText" />
+
+                <View
+
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:background="@color/colorHintText" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <com.shopoholicbuddy.customviews.CustomButton
+        android:id="@+id/btn_apply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+       android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/ic_button"
+        android:paddingTop="@dimen/_10sdp"
+        android:text="@string/apply"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_16ssp"
+        android:visibility="visible"
+        app:fontName="@string/orkney_bold" />
+
+</LinearLayout>

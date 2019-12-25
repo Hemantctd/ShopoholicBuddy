@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_20sdp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="@dimen/_5sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.shopoholicbuddy.customviews.CustomTextView
+            android:id="@+id/tv_message_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_15ssp"
+            app:fontName="@string/orkney_medium"
+            android:text="@string/save_deal" />
+
+        <com.shopoholicbuddy.customviews.CustomTextView
+            android:id="@+id/tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:textColor="@color/colorMessageText"
+            android:textSize="@dimen/_12ssp"
+            app:fontName="@string/orkney_regular"
+            android:text="@string/your_deal_will_be_saved_to_your_offline_deals_and_you_can_post_it_later"
+            />
+
+
+        <com.shopoholicbuddy.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:textColor="@color/colorMessageText"
+            android:textSize="@dimen/_12ssp"
+            app:fontName="@string/orkney_regular"
+            android:text="@string/your_saved_deals_will_be_removed_if_you_uninstall_the_appliocation"
+            />
+
+        <com.shopoholicbuddy.customviews.CustomButton
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/ic_button"
+            android:paddingTop="@dimen/_10sdp"
+            android:text="@string/ok"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_13sdp"
+            app:fontName="@string/orkney_bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="#d9d9d9" />
+
+        <com.shopoholicbuddy.customviews.CustomTextView
+            android:id="@+id/tv_dialogue_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:layout_gravity="center"
+            android:textColor="#49283e"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:textSize="@dimen/_15ssp"
+            app:fontName="@string/orkney_bold"/>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_buddy_assigned"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_buddy_image"
+        android:layout_width="@dimen/_49sdp"
+        android:layout_height="@dimen/_49sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:src="@drawable/ic_side_menu_user_placeholder" />
+
+
+    <com.shopoholicbuddy.customviews.CustomTextView
+        android:id="@+id/tv_buddy_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_toEndOf="@+id/iv_buddy_image"
+        android:ellipsize="end"
+        android:lines="2"
+        android:maxLines="2"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/_11ssp"
+        app:fontName="@string/orkney_regular"
+        tools:ignore="UnknownIdInLayout" />
+
+    <com.shopoholicbuddy.customviews.CustomTextView
+        android:id="@+id/tv_phone_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_buddy_name"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_toEndOf="@+id/iv_buddy_image"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxLines="1"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/_11ssp"
+        app:fontName="@string/orkney_regular"
+        tools:ignore="UnknownIdInLayout" />
+
+    <com.shopoholicbuddy.customviews.CustomTextView
+        android:id="@+id/tv_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_phone_no"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_toEndOf="@+id/iv_buddy_image"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxLines="1"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/_11ssp"
+        app:fontName="@string/orkney_regular"
+        tools:ignore="UnknownIdInLayout" />
+
+    <com.shopoholicbuddy.customviews.CustomTextView
+        android:id="@+id/tv_commission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_email"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_toEndOf="@+id/iv_buddy_image"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxLines="1"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/_11ssp"
+        app:fontName="@string/orkney_regular"
+        tools:ignore="UnknownIdInLayout" />
+
+    <CheckBox
+        android:id="@+id/cb_terms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_commission"
+        android:layout_alignTop="@+id/tv_terms_text"
+        android:layout_alignBottom="@+id/tv_terms_text"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:button="@drawable/custom_category_check_box"
+        android:lines="1"
+        android:maxLines="1"
+        android:textColor="@color/colorLightWhite"
+        android:textSize="@dimen/_11ssp"
+        tools:ignore="UnknownIdInLayout" />
+
+
+    <com.shopoholicbuddy.customviews.CustomTextView
+        android:id="@+id/tv_terms_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_commission"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_toEndOf="@+id/cb_terms"
+        android:ellipsize="end"
+        android:lines="2"
+        android:maxLines="2"
+        android:minLines="1"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:text="@string/dummy_text_short"
+        android:textColor="@color/colorLightWhite"
+        android:textSize="@dimen/_11ssp"
+        app:fontName="@string/orkney_regular"
+        tools:ignore="UnknownIdInLayout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_terms_text"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_40sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <com.shopoholicbuddy.customviews.CustomTextView
+            android:id="@+id/btn_accept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_13sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/light_round_corner_pink_bg"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:text="@string/accept"
+            android:textColor="@color/colorLightWhite"
+            android:textSize="@dimen/_11ssp"
+            app:fontName="@string/orkney_medium"
+            tools:ignore="UnknownIdInLayout" />
+
+        <com.shopoholicbuddy.customviews.CustomTextView
+            android:id="@+id/btn_reject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/light_round_white_stroke_transparent_bg"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:text="@string/reject"
+            android:textColor="@color/colorLightWhite"
+            android:textSize="@dimen/_11ssp"
+            app:fontName="@string/orkney_medium"
+            tools:ignore="UnknownIdInLayout" />
+    </LinearLayout>
+
+</RelativeLayout>

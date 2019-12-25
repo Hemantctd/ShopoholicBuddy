@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    android:orientation="vertical"
+    tools:context=".activities.Main4Activity">
+
+    <include
+        android:id="@+id/layout_toolbar"
+        layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="70dp"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
+
+                    <com.shopoholicbuddy.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:text="Fill Details To Complete Your KYC"
+                        android:textColor="@android:color/white"
+                        android:textSize="17sp"
+                        app:fontName="@string/orkney_bold" />
+
+                    <com.shopoholicbuddy.customviews.CustomEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:background="@android:color/transparent"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 "
+                        android:gravity="center"
+                        android:hint="Registered name of Organisation"
+                        android:imeOptions="actionNext"
+                        android:inputType="text|textCapWords"
+                        android:lines="1"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@color/colorHintText"
+                        android:textSize="@dimen/_11ssp"
+                        app:fontName="@string/orkney_regular" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        android:background="@color/colorSeparator" />
+
+                    <com.shopoholicbuddy.customviews.CustomEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:background="@android:color/transparent"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 "
+                        android:drawableEnd="@drawable/calender"
+                        android:gravity="center"
+                        android:hint="Incorporation Date"
+                        android:imeOptions="actionNext"
+                        android:inputType="text|textCapWords"
+                        android:lines="1"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@color/colorHintText"
+                        android:textSize="@dimen/_11ssp"
+                        app:fontName="@string/orkney_regular" />
+
+
+                    <com.shopoholicbuddy.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="Registered Under"
+                        android:textColor="@android:color/white"
+                        android:textSize="17sp"
+                        app:fontName="@string/orkney_bold" />
+
+
+                    <RadioGroup
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/colorHintText"
+                            android:fontFamily="@string/orkney_light"
+                            android:padding="4dp"
+                            android:text="Individual/Proprietership"
+                            android:textColor="@color/colorHintText" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:buttonTint="@color/colorHintText"
+                            android:fontFamily="@string/orkney_light"
+                            android:padding="4dp"
+                            android:text="Shops"
+
+                            android:textColor="@color/colorHintText" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:buttonTint="@color/colorHintText"
+                            android:fontFamily="@string/orkney_light"
+                            android:padding="4dp"
+                            android:text="Private Limited"
+                            android:textColor="@color/colorHintText" />
+
+                        <RadioButton
+                            android:id="@+id/radioFemale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:checked="true"
+                            android:fontFamily="@string/orkney_light"
+                            android:padding="4dp"
+                            android:text="Public Company"
+                            android:textColor="@color/colorAccent" />
+
+                    </RadioGroup>
+
+                    <RelativeLayout
+                        android:id="@+id/Relative1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp">
+
+
+                        <com.shopoholicbuddy.customviews.CustomTextView
+                            android:id="@+id/txt_SlNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="SNo."
+                            android:textColor="@android:color/white"
+                            android:textSize="17sp"
+                            app:fontName="@string/orkney_bold" />
+
+                        <com.shopoholicbuddy.customviews.CustomTextView
+                            android:id="@+id/txt_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txt_SlNo"
+                            android:layout_marginTop="5dp"
+                            android:text="1"
+                            android:textColor="@android:color/white"
+                            android:textSize="17sp"
+                            app:fontName="@string/orkney_bold" />
+
+                        <com.shopoholicbuddy.customviews.CustomTextView
+                            android:id="@+id/txt_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txt_1"
+                            android:layout_marginTop="5dp"
+                            android:text="2"
+                            android:textColor="@android:color/white"
+                            android:textSize="17sp"
+                            app:fontName="@string/orkney_bold" />
+
+                        <com.shopoholicbuddy.customviews.CustomTextView
+                            android:id="@+id/txt_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txt_2"
+                            android:layout_marginTop="5dp"
+                            android:text="3"
+                            android:textColor="@android:color/white"
+                            android:textSize="17sp"
+                            app:fontName="@string/orkney_bold" />
+
+                        <com.shopoholicbuddy.customviews.CustomTextView
+                            android:id="@+id/txt_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txt_3"
+                            android:text="@string/_4"
+                            android:textColor="@android:color/white"
+                            android:textSize="17sp"
+                            app:fontName="@string/orkney_bold" />
+
+
+                        <com.shopoholicbuddy.customviews.CustomTextView
+                            android:id="@+id/txt_particular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="150dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@+id/txt_SlNo"
+                            android:text="Particulars"
+                            android:textColor="@android:color/white"
+                            android:textSize="17sp"
+                            app:fontName="@string/orkney_bold" />
+
+                        <com.shopoholicbuddy.customviews.CustomTextView
+                            android:id="@+id/txt_copy_of_pan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txt_particular"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@+id/txt_SlNo"
+                            android:text="Copy Of Pan"
+                            android:textColor="@android:color/white"
+                            android:textSize="17sp"
+                            app:fontName="@string/orkney_bold" />
+
+                        <com.shopoholicbuddy.customviews.CustomTextView
+                            android:id="@+id/txt_copy_of_cancelledCheck"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txt_copy_of_pan"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@+id/txt_SlNo"
+                            android:text="Copy of Cancelled Cheque"
+                            android:textColor="@android:color/white"
+                            android:textSize="17sp"
+                            app:fontName="@string/orkney_bold" />
+
+                        <com.shopoholicbuddy.customviews.CustomTextView
+                            android:id="@+id/txt_copy_of_gstCertificate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txt_copy_of_cancelledCheck"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@+id/txt_SlNo"
+                            android:text="Copy of GST Certificate"
+                            android:textColor="@android:color/white"
+                            android:textSize="17sp"
+                            app:fontName="@string/orkney_bold" />
+
+                        <com.shopoholicbuddy.customviews.CustomTextView
+                            android:id="@+id/txt_copy_of_adhaar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txt_copy_of_gstCertificate"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@+id/txt_SlNo"
+                            android:text="Copy of Adhaar"
+                            android:textColor="@android:color/white"
+                            android:textSize="17sp"
+                            app:fontName="@string/orkney_bold" />
+
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_action"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/toolbar_gradient">
+
+
+            <com.shopoholicbuddy.customviews.CustomButton
+                android:id="@+id/btn_next"
+                android:layout_width="@dimen/_73sdp"
+                android:layout_height="@dimen/_73sdp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:background="@drawable/zero_px_transparent"
+                android:drawableRight="@drawable/ic_forward"
+                android:drawableTint="@color/white"
+                android:gravity="center"
+                android:text="@string/next"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_13sdp"
+                android:visibility="visible"
+                app:fontName="@string/orkney_bold" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

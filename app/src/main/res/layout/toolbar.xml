@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_40sdp"
+    app:layout_collapseMode="pin"
+    app:contentInsetStart="0dp"
+    android:background="@drawable/toolbar_gradient">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:layout_centerVertical="true"
+        tools:ignore="ContentDescription,RtlSymmetry" />
+
+    <com.shopoholicbuddy.customviews.CustomTextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="COMPLETE YOUR KYC"
+        android:lines="1"
+        android:ellipsize="end"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_13sdp"
+        app:fontName="@string/orkney_medium"
+        />
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="100dp"
+        android:layout_alignParentEnd="true">
+
+        <ProgressBar android:layout_height="match_parent"
+            android:layout_width="100dp"
+            android:secondaryProgress="80"
+            android:layout_centerInParent="true"
+            android:progress="60"
+            android:max="100"
+            android:indeterminate="false"
+            android:id="@+id/circularProgressbar"
+            />
+        <ImageView
+            android:background="@drawable/whitecircle"
+            android:layout_height="36dp"
+            android:layout_width="36dp"
+            android:layout_centerInParent="true"/>
+        <TextView android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/tv"
+            android:textSize="11sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="60%"
+            android:gravity="center"/>
+    </RelativeLayout>
+
+<!--
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_alignParentEnd="true"
+        >
+
+    <ProgressBar android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:secondaryProgress="100"
+        android:progressDrawable="@drawable/circular"
+        android:layout_centerInParent="true"
+        android:progress="50"
+        android:max="100"
+        android:indeterminate="false"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/circularProgressbar"/>
+
+    <ImageView
+        android:background="@drawable/whitecircle"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/tv" android:textSize="20sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="25%"
+        android:gravity="center"/>
+
+</RelativeLayout>
+-->
+    <ImageView
+        android:id="@+id/menu_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_home_cards_filter"
+        android:paddingStart="@dimen/_10sdp"
+        android:visibility="gone"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/menu_second_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_shopper_home_cards_search"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:visibility="gone"
+        android:paddingBottom="@dimen/_10sdp"
+        android:layout_toStartOf="@id/menu_right"
+        android:layout_centerVertical="true"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/menu_third_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_home_shopper_share_ic"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:visibility="gone"
+        android:layout_toStartOf="@id/menu_second_right"
+        android:layout_centerVertical="true"
+        tools:ignore="ContentDescription" />
+
+</RelativeLayout>
+</android.support.v7.widget.Toolbar>

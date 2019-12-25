@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">codescanner</string>
+    <string name="scan_qr_code">Scan QR code</string>
+    <string name="unable_to_scan_code">Unable to scan code. Try again</string>
+</resources>
